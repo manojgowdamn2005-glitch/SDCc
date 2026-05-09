@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sai's Registration</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+    <header>
+        <h1>Student Registration Portal</h1>
+        <p>Complete the form for enrolling into the new semester</p>
+    </header>
+
+    <main>
+        <form action="/register" method="post">
+
+            <section class="field-group">
+                <label>Student Name</label>
+                <input type="text" id="full_name" name="full_name" placeholder="John Doe" required>
+            </section>
+
+            <section class="field-group">
+                <label>Student Email Id</label>
+                <input type="email" id="email" name="email" placeholder="Email" required>
+            </section>
+
+            <section class="field-group">
+                <label for="course">Courses</label>
+                <select id="course" name="course" required>
+                    <option value="">---Select---</option>
+                    <option value="web_dev">Web Developer</option>
+                    <option value="python_dev">Python Developer</option>
+                    <option value="java_dev">Java Developer</option>
+                </select>
+            </section>
+
+            <section class="field-group">
+                <label>Enrollment Date</label>
+                <input type="date" id="enroll_date" name="enroll_date">
+            </section>
+
+            <section class="field-group">
+                <label>Phone Number</label>
+                <input type="text" id="phone" name="phone" placeholder="Phone Number">
+            </section>
+
+            <section class="field-group">
+                <label>Remarks</label>
+                <textarea name="remarks" placeholder="Any remarks"></textarea>
+            </section>
+
+            <button type="submit">Submit Form</button>
+
+        </form>
+    </main>
+</body>
+</html>
